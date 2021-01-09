@@ -1,0 +1,14 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+    <p><b>Display Name :</b> {{object.display_name}} </p>
+    <p><b>Profile Type :</b> {{object.profile_type}}</p>
+    <p><b>Location     :</b> {{object.location}} </p>
+    <p><b>Biography    :</b> {{object.biography}}</p>
+    <p><a href= "{% url 'update'  object.id  %}">Edit </a></p>
+
+{% endblock %}
